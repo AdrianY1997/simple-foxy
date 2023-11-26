@@ -1,0 +1,150 @@
+.container {
+  display: inline-block;
+  box-shadow: 0 0 5px 0 lightgray;
+}
+
+.element {
+  cursor: inherit;
+}
+
+.default,
+.primary,
+.secondary,
+.information,
+.success,
+.warning,
+.error {
+  cursor: pointer;
+}
+
+.disabled:hover button {
+  background-color: inherit !important;
+}
+
+.text {
+  background-color: rgb(255, 255, 255);
+  color: rgb(var(--principal-color));
+}
+
+.text:hover button {
+  background-color: rgba(var(--principal-color), 0.1);
+}
+
+.outlined button {
+  border-color: rgb(var(--principal-color));
+  color: rgb(var(--principal-color));
+}
+
+.outlined:hover button {
+  background-color: rgba(var(--principal-color), 0.1);
+}
+
+.outlined p {
+  transition-duration: 0s;
+}
+
+.contained {
+  background-color: rgb(var(--principal-color));
+}
+
+.contained.default {
+  background-color: rgb(235, 235, 235);
+}
+
+.contained.primary,
+.contained.secondary,
+.contained.success,
+.contained.warning,
+.contained.error {
+  color: white;
+}
+
+.contained.information {
+  color: black;
+}
+
+.contained:hover button {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.element button {
+  color: rgb(0, 0, 0);
+}
+
+.rounded-none {
+  border-radius: 0;
+}
+
+.rounded-mn {
+  border-radius: 0.25rem;
+}
+
+.rounded-sm {
+  border-radius: 0.5rem;
+}
+
+.rounded-lg {
+  border-radius: 0.75rem;
+}
+
+.rounded-full {
+  border-radius: 100%;
+}
+
+.border-1 {
+  border: 1px solid;
+}
+
+.border-2 {
+  border: 2px solid;
+}
+
+.border-3 {
+  border: 3px solid;
+}
+
+.border-4 {
+  border: 4px solid;
+}
+
+.border-5 {
+  border: 5px solid;
+}
+
+.rounded {
+  --minimal-size: 0.25rem;
+  --small-size: 0.5rem;
+  --normal-size: 1rem;
+  --big-size: 1.25;
+}
+
+.not-rounded {
+  --minimal-size: 0.2rem 0.25rem;
+  --small-size: 0.25rem 0.5rem;
+  --normal-size: 0.5rem 1rem;
+  --big-size: 0.75rem 1.25;
+}
+
+.minimal {
+  padding: var(--minimal-size);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.small {
+  padding: var(--small-size);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.normal {
+  padding: var(--normal-size);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.big {
+  padding: var(--big-size);
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}

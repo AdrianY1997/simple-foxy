@@ -1,0 +1,31 @@
+.default {
+  --principal-color: rgb(0, 0, 0);
+}
+
+.primary {
+  --principal-color: 4, 116, 220;
+}
+
+.secondary {
+  --principal-color: 67, 0, 125;
+}
+
+.information {
+  --principal-color: 146, 213, 230;
+}
+
+.success {
+  --principal-color: 33, 135, 60;
+}
+
+.warning {
+  --principal-color: 205, 125, 55;
+}
+
+.error {
+  --principal-color: 255, 0, 0;
+}
+
+.disabled {
+  --principal-color: 128, 128, 128;
+}
