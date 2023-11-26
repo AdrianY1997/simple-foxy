@@ -1,5 +1,5 @@
 .default {
-  --principal-color: rgb(0, 0, 0);
+  --principal-color: 225, 255, 255;
 }
 
 .primary {

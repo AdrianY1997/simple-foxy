@@ -53,7 +53,7 @@
 }
 
 .contained {
-  background-color: rgb(var(--principal-color));
+  background-color: rgb(var(--principal-color)) !important;
 }
 
 .contained.default {
@@ -72,7 +72,7 @@
   color: black;
 }
 
-.contained:hover button {
+.contained:hover p {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
