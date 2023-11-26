@@ -19,10 +19,11 @@ const Button = ({
   border,
   ...args
 }: OverridableFoxyButton) => {
-  const ref = useRef<HTMLButtonElement | null>(null);
+  const ref = useRef<HTMLParagraphElement | null>(null);
 
-  const containerClass = classNames(
+  const buttonClass = classNames(
     gStyle[`${color}`],
+    lStyle.element,
     lStyle[`${color}`],
     lStyle.container,
     lStyle[`rounded-${rounded}`],
@@ -30,8 +31,8 @@ const Button = ({
     lStyle[`${variant}`]
   );
 
-  const buttonClass = classNames(
-    lStyle.element,
+  const contentClass = classNames(
+    lStyle.content,
     lStyle[`rounded-${rounded}`],
     lStyle[rounded ? "rounded" : ""],
     lStyle[
@@ -45,20 +46,13 @@ const Button = ({
   delete args.className;
   return (
     <>
-      <div className={containerClass}>
-        <button
-          ref={ref}
-          className={buttonClass}
-          type={args.type || "button"}
-          {...args}
-        >
-          <p className="space-x-2">
-            {startIcon && <span>{startIcon}</span>}
-            {children && <span>{children}</span>}
-            {endIcon && <span>{endIcon}</span>}
-          </p>
-        </button>
-      </div>
+      <button className={buttonClass} {...args} type={args.type || "button"}>
+        <p ref={ref} className={contentClass}>
+          {startIcon && <span>{startIcon}</span>}
+          {children && <>{children}</>}
+          {endIcon && <span>{endIcon}</span>}
+        </p>
+      </button>
     </>
   );
 };
