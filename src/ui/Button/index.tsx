@@ -28,6 +28,9 @@ const Button = ({
     lStyle.container,
     lStyle[`rounded-${rounded}`],
     lStyle[rounded ? "rounded" : ""],
+    lStyle[
+      variant === "outlined" ? `border-${border || 1}` : `border-${border}`
+    ],
     lStyle[`${variant}`],
     args.className
   );
@@ -36,9 +39,6 @@ const Button = ({
     lStyle.content,
     lStyle[`rounded-${rounded}`],
     lStyle[rounded ? "rounded" : ""],
-    lStyle[
-      variant === "outlined" ? `border-${border || 1}` : `border-${border}`
-    ],
     lStyle[`${size}`],
     transform
   );
