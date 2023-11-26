@@ -1,0 +1,33 @@
+{
+  "name": "@simple-foxy/ui",
+  "version": "0.0.1-alpha",
+  "description": "Simple UI for react",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "scripts": {
+    "build": "tsc --build --force && copyfiles -u 1 src/**/*.css dist",
+    "copy": "copyfiles -u 1 'src/**/*.css dist'",
+    "dev": "chokidar src/**/*.* -c \"npm run build\""
+  },
+  "author": {
+    "name": "HappyFox.Devs",
+    "email": "happyfox.devs@gmail.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@types/css-modules": "^1.0.5",
+    "classnames": "^2.3.2",
+    "react": "^18.2.0",
+    "typescript": "^5.2.2",
+    "typescript-plugin-css-modules": "^5.0.2",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@types/uuid": "^9.0.7",
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.3",
+    "concurrently": "^8.2.2",
+    "copyfiles": "^2.4.1"
+  }
+}
