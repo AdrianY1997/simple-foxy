@@ -4,14 +4,23 @@ import { OverridableTooltipType } from "../../types/tooltip";
 
 import lStyle from "./tooltip.module.css";
 
-const Tooltip = ({ title, placement, children }: OverridableTooltipType) => {
+const Tooltip = ({
+  title,
+  placement,
+  children,
+  ...args
+}: OverridableTooltipType) => {
   const containerClass = classNames(lStyle.container);
-  const tooltipClass = classNames(lStyle.element, lStyle[placement]);
+  args.className = classNames(
+    lStyle.element,
+    lStyle[placement],
+    args.className
+  );
 
   return (
     <>
       <div className={containerClass}>
-        <div className={classNames(tooltipClass)}>{title}</div>
+        <div {...args}>{title}</div>
         <div>{children}</div>
       </div>
     </>
