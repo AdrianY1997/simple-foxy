@@ -159,12 +159,12 @@
   text-transform: var(--element-transform);
   text-decoration: var(--element-decoration);
   border: var(--element-border-normal);
-  background-color: var(--element-background-normal);
+  background-color: var(--element-background-normal) !important;
   color: var(--element-color);
 }
 
 .element:hover {
-  background-color: var(--element-background-hover);
+  background-color: var(--element-background-hover) !important;
 }
 
 .element.color-disabled {
