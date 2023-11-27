@@ -1,5 +1,5 @@
 import React from "react";
-import { FoxyComponentColor, FoxyComponentColorVariant } from "./simple-foxy";
+import { FoxyComponentColor } from "./simple-foxy";
 
 export type FoxyComponentTypographyElement =
   | "h1"
