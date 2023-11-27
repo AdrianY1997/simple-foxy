@@ -1,8 +1,9 @@
 import React, { Fragment } from "react";
-
-import style from "./test.module.css";
 import classNames from "classnames";
+
 import { FoxyComponentOverridableButton } from "../../types/button";
+
+import style from "./button.module.css";
 
 const Button = ({
   elevation,
