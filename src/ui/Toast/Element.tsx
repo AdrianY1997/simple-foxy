@@ -69,7 +69,7 @@ export default function Element({ data, ...args }: ToastElementProps) {
                   rounded="full"
                   variant="outlined"
                   color="error"
-                  size="minimal"
+                  size="small"
                   onClick={handleRemoveToast}
                 >
                   <IconTimes height="1rem" />
