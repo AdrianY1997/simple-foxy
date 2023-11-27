@@ -17,7 +17,7 @@
   position: absolute;
   display: none;
   width: max-content;
-  max-width: 100px;
+  max-width: 300px;
   animation: fade-in 200ms linear;
 }
 

@@ -3,6 +3,7 @@ import classNames from "classnames";
 
 import { FoxyComponentOverridableButton } from "../../types/button";
 
+import globl from "../global.module.css";
 import style from "./button.module.css";
 
 const Button = ({
@@ -20,6 +21,7 @@ const Button = ({
 }: FoxyComponentOverridableButton) => {
   args.className = classNames(
     style.c0,
+    globl[`color-${color}`],
     style[`elevation-${elevation}`],
     style[`border-${border}`],
     style[`size-${size}`],
@@ -28,7 +30,6 @@ const Button = ({
     style[`transform-${transform}`],
     style[`decoration-${decoration}`],
     style[`variant-${variant}`],
-    style[`color-${color}`],
     style.element,
     args.className
   );

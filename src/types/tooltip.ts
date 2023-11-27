@@ -16,4 +16,5 @@ export type OverridableTooltipType = React.ComponentPropsWithoutRef<"div"> & {
   title: React.ReactNode | Element;
   placement: FoxyComponentToolipPlacement;
   children: React.ReactNode;
+  args?: any;
 };

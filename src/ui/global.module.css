@@ -1,31 +1,63 @@
-.default {
-  --principal-color: 225, 255, 255;
+.color-default {
+  --color-background: 255, 255, 255;
+  --color-primary: 170, 170, 170;
+  --color-secondary: 240, 240, 240;
+  --color-dark: 154, 154, 154;
+  --color-text-contrast: 255, 255, 255;
 }
 
-.primary {
-  --principal-color: 4, 116, 220;
+.color-primary {
+  --color-background: 255, 255, 255;
+  --color-primary: 4, 116, 220;
+  --color-secondary: 235 241 255;
+  --color-dark: 3, 102, 194;
+  --color-text-contrast: 255, 255, 255;
 }
 
-.secondary {
-  --principal-color: 67, 0, 125;
+.color-secondary {
+  --color-background: 255, 255, 255;
+  --color-primary: 67, 0, 125;
+  --color-secondary: 235, 231, 238;
+  --color-dark: 55, 0, 103;
+  --color-text-contrast: 255, 255, 255;
 }
 
-.information {
-  --principal-color: 146, 213, 230;
+.color-information {
+  --color-background: 255, 255, 255;
+  --color-primary: 146, 213, 230;
+  --color-secondary: 240, 252, 255;
+  --color-dark: 128, 195, 213;
+  --color-text-contrast: 0, 0, 0;
 }
 
-.success {
-  --principal-color: 33, 135, 60;
+.color-success {
+  --color-background: 255, 255, 255;
+  --color-primary: 33, 135, 60;
+  --color-secondary: 225, 255, 233;
+  --color-dark: 28, 122, 53;
+  --color-text-contrast: 255, 255, 255;
 }
 
-.warning {
-  --principal-color: 205, 125, 55;
+.color-warning {
+  --color-background: 255, 255, 255;
+  --color-primary: 205, 125, 55;
+  --color-secondary: 255, 241, 230;
+  --color-dark: 196, 115, 44;
+  --color-text-contrast: 255, 255, 255;
 }
 
-.error {
-  --principal-color: 255, 0, 0;
+.color-error {
+  --color-background: 255, 255, 255;
+  --color-primary: 255, 0, 0;
+  --color-secondary: 255, 228, 228;
+  --color-dark: 170, 0, 0;
+  --color-text-contrast: 255, 255, 255;
 }
 
-.disabled {
-  --principal-color: 128, 128, 128;
+.color-disabled {
+  --color-background: 235, 235, 235;
+  --color-primary: 180, 180, 180;
+  --color-secondary: 235, 235, 235;
+  --color-dark: 180, 180, 180;
+  --color-text-contrast: 255, 255, 255;
 }

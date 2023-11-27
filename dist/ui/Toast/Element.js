@@ -39,7 +39,7 @@ function Element({ data, ...args }) {
     const barRef = (0, react_1.useRef)(null);
     args.className = (0, classnames_1.default)(toast_module_css_1.default.element);
     const contentClass = (0, classnames_1.default)(toast_module_css_1.default.content, toast_module_css_1.default[data.title ? "title" : "no-title"]);
-    const barClass = (0, classnames_1.default)(global_module_css_1.default[data.type], toast_module_css_1.default.bar, toast_module_css_1.default["loader-0"]);
+    const barClass = (0, classnames_1.default)(global_module_css_1.default[`color-${data.type}`], toast_module_css_1.default.bar, toast_module_css_1.default["loader-0"]);
     function hideToast() {
         elementRef.current?.classList.add((0, classnames_1.default)(toast_module_css_1.default.hide));
         elementRef.current?.style.setProperty("height", `${elementRef.current?.offsetHeight}px`);
