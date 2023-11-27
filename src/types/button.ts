@@ -1,38 +1,43 @@
-import { FoxyComponentColor } from "./simple-foxy";
-import React from "react";
+export type FoxyComponentButtonElevation = "none" | "near" | "normal" | "far";
 
-export type FoxyComponentButtonRounded = "none" | "mn" | "sm" | "lg" | "full";
-export type FoxyComponentButtonVariant = "text" | "outlined" | "contained";
+export type FoxyComponentButtonBorder = 1 | 2 | 3 | 4 | 5;
 
-export type FoxyComponentVariantButtons = {
-  [variants in FoxyComponentButtonVariant]: any;
-};
+export type FoxyComponentButtonWeight = "lighter" | "bolder" | "bold";
 
-export type FoxyComponentButtonSize = "minimal" | "small" | "normal" | "big";
+export type FoxyComponentButtonSize = "small" | "normal" | "large";
 
-export type FoxyComponentButtonTransform =
-  | "capitalize"
-  | "uppercase"
-  | "lowecase";
+export type FoxyComponentButtonRounded = "small" | "normal" | "large" | "full";
 
-export type OverridableFoxyButtonBase =
+export type FoxyComponentButtonTransform = "cap" | "lower" | "upper";
+
+export type FoxyComponentButtonDecoration =
+  | "overline"
+  | "underline"
+  | "line-through";
+
+export type FoxyComponentButtonVariant = "contained" | "outlined" | "text";
+
+export type FoxyComponentButtonColor =
+  | "default"
+  | "primary"
+  | "secondary"
+  | "information"
+  | "disabled"
+  | "success"
+  | "warning"
+  | "error";
+
+export type FoxyComponentOverridableButton =
   React.ComponentPropsWithoutRef<"button"> & {
-    border?: 1 | 2 | 3 | 4 | 5;
+    elevation?: FoxyComponentButtonElevation;
+    border?: FoxyComponentButtonBorder;
     size?: FoxyComponentButtonSize;
-    variant?: FoxyComponentButtonVariant;
-    children?: React.ReactNode;
-    transform?: FoxyComponentButtonTransform;
+    weight?: FoxyComponentButtonWeight;
     rounded?: FoxyComponentButtonRounded;
+    transform?: FoxyComponentButtonTransform;
+    decoration?: FoxyComponentButtonDecoration;
+    variant?: FoxyComponentButtonVariant;
+    color?: FoxyComponentButtonColor;
+    children: React.ReactNode;
     args?: any;
   };
-
-export type OverridableFoxyButton = (
-  | (OverridableFoxyButtonBase & {
-      startIcon?: React.ReactNode;
-      endIcon?: never;
-    })
-  | (OverridableFoxyButtonBase & {
-      startIcon?: never;
-      endIcon?: React.ReactNode;
-    })
-) & { color?: FoxyComponentColor };

@@ -1,58 +1,43 @@
-"use client";
+import React, { Fragment } from "react";
 
-import React, { useRef } from "react";
+import style from "./test.module.css";
 import classNames from "classnames";
-import { OverridableFoxyButton } from "../../types/button";
-
-import gStyle from "../global.module.css";
-import lStyle from "./button.module.css";
+import { FoxyComponentOverridableButton } from "../../types/button";
 
 const Button = ({
+  elevation,
+  border = 1,
   size,
-  variant = "text",
-  color = "default",
-  startIcon,
-  endIcon,
-  children,
+  weight,
+  rounded,
   transform,
-  rounded = "mn",
-  border,
+  decoration,
+  variant,
+  color,
+  children,
   ...args
-}: OverridableFoxyButton) => {
-  const ref = useRef<HTMLParagraphElement | null>(null);
-
+}: FoxyComponentOverridableButton) => {
   args.className = classNames(
-    gStyle[`${color}`],
-    lStyle.element,
-    lStyle[`${color}`],
-    lStyle.container,
-    lStyle[`rounded-${rounded}`],
-    lStyle[rounded ? "rounded" : ""],
-    lStyle[
-      variant === "outlined" ? `border-${border || 1}` : `border-${border}`
-    ],
-    lStyle[`${variant}`],
+    style.c0,
+    style[`elevation-${elevation}`],
+    style[`border-${border}`],
+    style[`size-${size}`],
+    style[`weight-${weight}`],
+    style[`rounded-${rounded}`],
+    style[`transform-${transform}`],
+    style[`decoration-${decoration}`],
+    style[`variant-${variant}`],
+    style[`color-${color}`],
+    style.element,
     args.className
   );
 
-  const contentClass = classNames(
-    lStyle.content,
-    lStyle[`rounded-${rounded}`],
-    lStyle[rounded ? "rounded" : ""],
-    lStyle[`${size}`],
-    transform
-  );
+  args.type = args.type || "button";
 
   return (
-    <>
-      <button {...args} type={args.type || "button"}>
-        <p ref={ref} className={contentClass}>
-          {startIcon && <span>{startIcon}</span>}
-          {children && <>{children}</>}
-          {endIcon && <span>{endIcon}</span>}
-        </p>
-      </button>
-    </>
+    <Fragment>
+      <button {...args}>{children}</button>
+    </Fragment>
   );
 };
 
