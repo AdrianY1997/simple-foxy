@@ -11,7 +11,7 @@ const Divider = ({
   ...args
 }: OverridableDividerType) => {
   args.className = classNames(
-    gStyle[`${args.color}`],
+    gStyle[`color-${args.color}`],
     lStyle.element,
     lStyle[orientation],
     args.className

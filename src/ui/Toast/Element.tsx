@@ -22,7 +22,7 @@ export default function Element({ data, ...args }: ToastElementProps) {
   );
 
   const barClass = classNames(
-    gStyle[data.type],
+    gStyle[`color-${data.type}`],
     lStyle.bar,
     lStyle["loader-0"]
   );

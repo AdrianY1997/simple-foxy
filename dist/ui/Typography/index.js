@@ -15,7 +15,7 @@ const global_module_css_1 = __importDefault(require("../global.module.css"));
 const typography_module_css_1 = __importDefault(require("./typography.module.css"));
 const classnames_1 = __importDefault(require("classnames"));
 const Typography = ({ children, variant = "paragraph", ...args }) => {
-    args.className = (0, classnames_1.default)(global_module_css_1.default[`${args.color}`], typography_module_css_1.default.element, typography_module_css_1.default[variant], args.className);
+    args.className = (0, classnames_1.default)(global_module_css_1.default[`color-${args.color}`], typography_module_css_1.default.element, typography_module_css_1.default[variant], args.className);
     const variantClassses = {
         h1: (0, Heading1_1.Heading1)({ children, ...args }),
         h2: (0, Heading2_1.Heading2)({ children, ...args }),

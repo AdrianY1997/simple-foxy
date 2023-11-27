@@ -21,7 +21,7 @@ const Typography = ({
   ...args
 }: OverridableTypography) => {
   args.className = classNames(
-    gStyle[`${args.color}`],
+    gStyle[`color-${args.color}`],
     lStyle.element,
     lStyle[variant],
     args.className

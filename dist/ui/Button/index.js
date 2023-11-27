@@ -28,9 +28,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importStar(require("react"));
 const classnames_1 = __importDefault(require("classnames"));
+const global_module_css_1 = __importDefault(require("../global.module.css"));
 const button_module_css_1 = __importDefault(require("./button.module.css"));
 const Button = ({ elevation, border = 1, size, weight, rounded, transform, decoration, variant, color, children, ...args }) => {
-    args.className = (0, classnames_1.default)(button_module_css_1.default.c0, button_module_css_1.default[`elevation-${elevation}`], button_module_css_1.default[`border-${border}`], button_module_css_1.default[`size-${size}`], button_module_css_1.default[`weight-${weight}`], button_module_css_1.default[`rounded-${rounded}`], button_module_css_1.default[`transform-${transform}`], button_module_css_1.default[`decoration-${decoration}`], button_module_css_1.default[`variant-${variant}`], button_module_css_1.default[`color-${color}`], button_module_css_1.default.element, args.className);
+    args.className = (0, classnames_1.default)(button_module_css_1.default.c0, global_module_css_1.default[`color-${color}`], button_module_css_1.default[`elevation-${elevation}`], button_module_css_1.default[`border-${border}`], button_module_css_1.default[`size-${size}`], button_module_css_1.default[`weight-${weight}`], button_module_css_1.default[`rounded-${rounded}`], button_module_css_1.default[`transform-${transform}`], button_module_css_1.default[`decoration-${decoration}`], button_module_css_1.default[`variant-${variant}`], button_module_css_1.default.element, args.className);
     args.type = args.type || "button";
     return (react_1.default.createElement(react_1.Fragment, null,
         react_1.default.createElement("button", { ...args }, children)));

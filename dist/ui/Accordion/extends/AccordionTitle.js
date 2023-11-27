@@ -15,10 +15,9 @@ function AccordionTitle({ startIcon, endIcon, children, ...args }) {
         setIsShow(!isShow);
     };
     return (react_1.default.createElement(react_1.default.Fragment, null,
-        react_1.default.createElement("div", { onClick: handleOpen, ...args },
-            react_1.default.createElement("p", null,
-                startIcon && (react_1.default.createElement("span", { className: (0, classnames_1.default)(isShow && accordion_module_css_1.default.show) }, startIcon)),
-                children,
-                endIcon && (react_1.default.createElement("span", { className: (0, classnames_1.default)(isShow && accordion_module_css_1.default.show) }, endIcon))))));
+        react_1.default.createElement("p", { onClick: handleOpen, ...args },
+            startIcon && (react_1.default.createElement("span", { className: (0, classnames_1.default)(isShow && accordion_module_css_1.default.show) }, startIcon)),
+            children,
+            endIcon && (react_1.default.createElement("span", { className: (0, classnames_1.default)(isShow && accordion_module_css_1.default.show) }, endIcon)))));
 }
 exports.default = AccordionTitle;
